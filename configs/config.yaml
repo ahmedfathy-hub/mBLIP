@@ -2,21 +2,21 @@
 
 # specify here default training configuration
 defaults:
-  - trainer: default.yaml
-  - module: trident.yaml
-  - optimizer: adamw.yaml
-  - scheduler: linear_warm_up.yaml
+  - trainer: /content/mBLIP/configs/trainer/default.yaml
+  - module: /content/mBLIP/configs/module/trident.yaml
+  - optimizer: /content/mBLIP/configs/optimizer/adamw.yaml
+  - scheduler: /content/mBLIP/configs/scheduler/linear_warm_up.yaml
   - datamodule: mnist_datamodule.yaml
-  - tokenizer: trident.yaml
-  - config_callbacks: trident.yaml
+  - tokenizer: /content/mBLIP/configs/datamodule/mblip_flickr.yaml
+  - config_callbacks: /content/mBLIP/configs/config_callbacks/trident.yaml
 
-  - callbacks: default.yaml # set this to null if you don't want to use callbacks
+  - callbacks: /content/mBLIP/configs/callbacks/default.yaml # set this to null if you don't want to use callbacks
   - logger: null # set logger here or use command line (e.g. `python run.py logger=wandb`)
 
   - experiment: null
   - hparams_search: null
 
-  - hydra: default.yaml
+  - hydra: /content/mBLIP/configs/hydra/default.yaml
 
   # enable color logging
   - override hydra/hydra_logging: colorlog
