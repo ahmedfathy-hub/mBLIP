@@ -11,6 +11,9 @@ nltk.download('stopwords')
 
 data_file = "ccs_synthetic_filtered_large.json"
 all_blip_data = json.load(open(data_file))
+
+#parameter changing
+all_blip_data = all_blip_data[:100]
 print(len(all_blip_data))
 print(all_blip_data[0])
 
