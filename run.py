@@ -11,7 +11,7 @@ dotenv.load_dotenv(override=True)
 log = get_logger(__name__)
 
 
-@hydra.main(version_base="1.2", config_path="/content/mBLIP/configs/", config_name="config.yaml")
+@hydra.main(version_base="1.2", config_path="configs/", config_name="config.yaml")
 def main(cfg: DictConfig):
 
     # Imports should be nested inside @hydra.main to optimize tab completion
